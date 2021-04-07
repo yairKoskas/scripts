@@ -1,0 +1,4 @@
+python3 /home/yairko/Desktop/.scripts/.pin.py
+clear
+sshpass -f /home/yairko/Desktop/.scripts/.unipasswd scp -r . koskasy1@planet.cs.biu.ac.il:/u/stud/koskasy1
+rm /home/yairko/Desktop/.scripts/.unipasswd
