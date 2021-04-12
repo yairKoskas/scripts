@@ -1,4 +1,9 @@
-python3 /home/yairko/Desktop/.scripts/.pin.py
-clear
-sshpass -f /home/yairko/Desktop/.scripts/.unipasswd ssh koskasy1@planet.cs.biu.ac.il
+#!/bin/bash
+/home/yairko/Desktop/.scripts/.pin
+if [ $? -eq 0 ]
+then
+echo 'Connecting...'
+value="$(cat /home/yairko/Desktop/.scripts/.unipasswd)"
 rm /home/yairko/Desktop/.scripts/.unipasswd
+sshpass -p $value ssh koskasy1@planet.cs.biu.ac.il
+fi
